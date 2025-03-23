@@ -174,6 +174,7 @@ $main-text-color: #252525 !default;
 /* Redefine header logo*/
 .header-logo-image {
     margin-left: 0%;
+    margin-top: 1%;
     padding-left: 0;
     padding-right: 0;
     border: 3px double #000000;
@@ -197,7 +198,7 @@ $main-text-color: #252525 !default;
     @include small {
 	height: 6.5rem;
     }
-    
+
     &:hover {
 	transform: scale(1.05);
     }
@@ -205,7 +206,7 @@ $main-text-color: #252525 !default;
 
 /* Language link */
 .language-switch {
-    
+
     @include large {
 	margin-top : 5rem;
     }
@@ -218,7 +219,7 @@ $main-text-color: #252525 !default;
     @include small {
 	display : none;
     }
-    
+
     &:hover {
 	transform: scale(1.1);
     }
@@ -226,7 +227,7 @@ $main-text-color: #252525 !default;
 }
 
 .language-link {
-    margin-left: auto; 
+    margin-left: auto;
     padding: 0 15px;
     text-decoration: none;
     color: inherit;
@@ -340,26 +341,60 @@ p {
 /* Define style for posts */
 .posts-list {
     list-style: none;
-    margin-top: 3rem;
-    margin-bottom: 20px; /* Adds space between posts */
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem; /* Adds space between posts */
 }
 
 .post {
-    margin-top: 3rem;
-    margin-bottom: 3rem; /* Adjust the space between posts */
-    text-align: center; /* Center the content of each post */
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 1.5rem; /* Space between image and text */
+    margin: 1.5rem 0;
+    text-align: left; /* Align text left now */
+}
+
+.post:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.post-image-wrapper {
+  width: 200px;
+  height: 150px;
+  border-radius: 15px;
+  flex-shrink: 0; /* Prevent shrinking */
+  overflow: hidden;
 }
 
 .post-image {
-    margin-top: 30px;
-    margin-bottom:30px;
-    width: 200px;
-    height: auto;
-    margin-bottom: 10px;
+    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0; /* Reset previous margins */
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-bottom: 1%;
+    display: block;
+}
+
+.post-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.post-content > * {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
 }
 
 .post-title {
     /* Additional styling for the post title if needed */
+    text-align: left;
+    font-size: 1.2rem;
 }
 
 
