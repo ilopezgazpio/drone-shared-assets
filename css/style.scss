@@ -351,6 +351,11 @@ p {
     gap: 1.5rem; /* Space between image and text */
     margin: 1.5rem 0;
     text-align: left; /* Align text left now */
+
+    @include small {
+        display: inline-block;
+    }
+
 }
 
 .post:hover {
