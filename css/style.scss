@@ -354,6 +354,7 @@ p {
 
     @include small {
         display: inline-block;
+	text-align: center; /* Align text middle now */
     }
 
 }
@@ -400,6 +401,11 @@ p {
     /* Additional styling for the post title if needed */
     text-align: left;
     font-size: 1.2rem;
+
+    @include small {
+	text-align: center;
+	font-size: 1rem;
+    }
 }
 
 
@@ -448,4 +454,9 @@ p {
     margin-bottom: 0px;
     border: 0.5px solid black;
     object-fit: cover;
+
+    @include small {
+	float: center;
+    }
+
 }
